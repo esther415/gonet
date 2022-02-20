@@ -1,0 +1,433 @@
+$tablet: 768px;
+
+.cards {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  &__content {
+    display: flex;
+    width: 158px;
+    flex-direction: column;
+    border-radius: 16px;
+    margin-top: 30px;
+    @media (min-width: $tablet) {
+      margin-top: 60px;
+      width: 530px;
+      flex-direction: row;
+    }
+    &__div1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(135deg, #ff0000 0%, #fed482 100%);
+      padding: 5px;
+      border-radius: 5px 5px 0px 0px;
+      @media (min-width: $tablet) {
+        width: 40%;
+        border-radius: 16px 0px 0px 16px;
+      }
+      &--image {
+        width: 68px;
+        height: 70px;
+        border-radius: 50%;
+        margin-top: 0;
+        @media (min-width: $tablet) {
+          width: 163px;
+          height: 170px;
+        }
+      }
+    }
+    &__div2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(135deg, #1c792b 0%, #82e95e 100%);
+      padding: 5px;
+      border-radius: 5px 5px 0px 0px;
+      @media (min-width: $tablet) {
+        width: 40%;
+        border-radius: 16px 0px 0px 16px;
+      }
+      &--image2 {
+        width: 68px;
+        height: 70px;
+        border-radius: 50%;
+        margin-top: 0;
+        @media (min-width: $tablet) {
+          width: 163px;
+          height: 170px;
+        }
+      }
+    }
+    &__div3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(135deg, #0597b7 0%, #66d1ff 100%);
+      padding: 5px;
+      border-radius: 5px 5px 0px 0px;
+      @media (min-width: $tablet) {
+        width: 40%;
+        border-radius: 16px 0px 0px 16px;
+      }
+
+      &--image {
+        width: 68px;
+        height: 70px;
+        border-radius: 50%;
+        margin-top: 0;
+        @media (min-width: $tablet) {
+          width: 163px;
+          height: 170px;
+        }
+      }
+    }
+    &__div4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(135deg, #ffc700 0%, #fff388 100%);
+      padding: 5px;
+      border-radius: 5px 5px 0px 0px;
+      @media (min-width: $tablet) {
+        width: 40%;
+        border-radius: 16px 0px 0px 16px;
+      }
+
+      &--image {
+        width: 68px;
+        height: 70px;
+        border-radius: 50%;
+        margin-top: 0;
+        @media (min-width: $tablet) {
+          width: 163px;
+          height: 170px;
+        }
+      }
+    }
+    &__div5 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(135deg, #7f8c8d 0%, #ebedef 100%);
+      padding: 5px;
+      border-radius: 5px 5px 0px 0px;
+      @media (min-width: $tablet) {
+        width: 40%;
+        border-radius: 16px 0px 0px 16px;
+      }
+
+      &--image {
+        width: 68px;
+        height: 70px;
+        border-radius: 50%;
+        margin-top: 0;
+        @media (min-width: $tablet) {
+          width: 163px;
+          height: 170px;
+        }
+      }
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      padding-right: 7px;
+      background-color: #ffffff;
+      border-radius: 0px 0px 5px 5px;
+      @media (min-width: $tablet) {
+        padding: 20px;
+        width: 60%;
+
+        border-radius: 0px 16px 16px 0px;
+      }
+      &__div {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        &__status {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          @media (min-width: $tablet) {
+            flex-direction: row;
+          }
+          &--title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 19px;
+
+            margin: 0;
+            text-align: left;
+
+            color: #999999;
+            @media (min-width: $tablet) {
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+          }
+
+          &--paragraph {
+            display: none;
+            @media (min-width: $tablet) {
+              display: flex;
+              font-size: 14px;
+
+              font-style: normal;
+              font-weight: 600;
+              font-size: 11px;
+              line-height: 19px;
+              /* identical to box height */
+
+              text-align: left;
+
+              color: #999999;
+            }
+          }
+        }
+
+        .imgDiv {
+          justify-content: space-between;
+          flex-direction: row;
+          .checkeable {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            font-family: arial;
+            .checkeableInput {
+              display: none;
+            }
+            .checkeableInput:checked + .checkeableSpan {
+              background-image: url("../assets/save.png");
+            }
+            .checkeableSpan {
+              display: inline-block;
+              width: 18px;
+              height: 20px;
+              background-size: cover;
+              background-image: url("../assets/noSave.png");
+            }
+
+            .iconButton {
+              border: none;
+              background: none;
+              .icon {
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+      &__data {
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: $tablet) {
+          justify-content: flex-start;
+        }
+
+        &--title {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15.3px;
+          line-height: 30px;
+
+          color: #081f32;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          @media (min-width: $tablet) {
+            font-size: 30px;
+            margin: 0 0 20px 0;
+            text-align: left;
+            line-height: 46px;
+          }
+        }
+
+        &--subtitle {
+          display: none;
+          @media (min-width: $tablet) {
+            display: flex;
+            margin: 0;
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 27px;
+            color: #374a59;
+            text-align: left;
+          }
+        }
+
+        h3 {
+          display: none;
+          @media (min-width: $tablet) {
+            display: flex;
+            margin: 0;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 27px;
+            color: #374a59;
+            text-align: left;
+          }
+        }
+      }
+    }
+    &__containerDisabled {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      padding-right: 7px;
+
+      background-color: #cccccc;
+      border-radius: 0px 0px 5px 5px;
+      @media (min-width: $tablet) {
+        width: 60%;
+        padding: 20px;
+        min-height: 250px;
+        border-radius: 0px 16px 16px 0px;
+      }
+      &__div {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        &__status {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-self: flex-end;
+          @media (min-width: $tablet) {
+            flex-direction: row;
+          }
+          &--title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 19px;
+            /* identical to box height */
+            margin: 0;
+            text-align: left;
+
+            color: #999999;
+            @media (min-width: $tablet) {
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+          }
+
+          &--paragraph {
+            display: none;
+            @media (min-width: $tablet) {
+              display: flex;
+              font-size: 14px;
+
+              font-style: normal;
+              font-weight: 600;
+              font-size: 11px;
+              line-height: 19px;
+              /* identical to box height */
+
+              text-align: left;
+
+              color: #999999;
+            }
+          }
+        }
+
+        .imgDiv {
+          justify-content: space-between;
+          flex-direction: row;
+          .checkeable {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            font-family: arial;
+            .checkeableInput {
+              display: none;
+            }
+            .checkeableInput:checked + .checkeableSpan {
+              background-image: url("../assets/save.png");
+            }
+            .checkeableSpan {
+              display: inline-block;
+              width: 18px;
+              height: 20px;
+              background-size: cover;
+              background-image: url("../assets/noSave.png");
+            }
+
+            .iconButton {
+              border: none;
+              background: none;
+              .icon {
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      &__data {
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: $tablet) {
+          justify-content: flex-start;
+        }
+
+        &--title {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15.3px;
+          line-height: 30px;
+
+          color: #081f32;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          @media (min-width: $tablet) {
+            font-size: 30px;
+            margin: 0 0 20px 0;
+            text-align: left;
+            line-height: 46px;
+          }
+        }
+
+        &--subtitle {
+          display: none;
+          @media (min-width: $tablet) {
+            display: flex;
+            margin: 0;
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 27px;
+            color: #374a59;
+            text-align: left;
+          }
+        }
+
+        h3 {
+          display: none;
+          @media (min-width: $tablet) {
+            display: flex;
+            margin: 0;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 27px;
+            color: #374a59;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
