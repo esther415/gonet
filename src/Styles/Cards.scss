@@ -8,7 +8,7 @@ $tablet: 768px;
 
   &__content {
     display: flex;
-    width: 158px;
+    width: 165px;
     flex-direction: column;
     border-radius: 16px;
     margin-top: 30px;
@@ -240,7 +240,7 @@ $tablet: 768px;
           margin-top: 10px;
           margin-bottom: 10px;
           @media (min-width: $tablet) {
-            font-size: 30px;
+            font-size: 29px;
             margin: 0 0 20px 0;
             text-align: left;
             line-height: 46px;
@@ -391,7 +391,7 @@ $tablet: 768px;
           margin-top: 10px;
           margin-bottom: 10px;
           @media (min-width: $tablet) {
-            font-size: 30px;
+            font-size: 29px;
             margin: 0 0 20px 0;
             text-align: left;
             line-height: 46px;

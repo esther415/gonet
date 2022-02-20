@@ -7,16 +7,25 @@ import Cards from "./Cards";
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [students, setStudents] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
 
+  let urlCharacter = " http://localhost:5008/character";
+  let urlStudents = " http://localhost:5008/students";
   useEffect(() => {
-    fetch("json/hp-characters.json")
+    fetch(urlCharacter, {
+      method: "GET",
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    })
       .then((response) => response.json())
-      .then((datos) => setCharacters(datos));
+      .then((data) => setCharacters(data))
+      .catch((error) => console.log(error));
 
-    fetch("json/hp-students.json")
+    fetch(urlStudents, {
+      method: "GET",
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    })
       .then((response) => response.json())
-      .then((datos) => setStudents(datos));
+      .then((data) => setStudents(data))
+      .catch((error) => console.log(error));
   }, []);
 
   return (
@@ -25,11 +34,7 @@ const App = () => {
       <div className="main__header">
         <img src="icons/titleHarry.png" className="main__header--img" />
         <h2 className="main__header--title">Selecciona tu filtro</h2>
-        <ButtonFilter
-          setCharacters={setCharacters}
-          characters={characters}
-          setIsOpen={setIsOpen}
-        />
+        <ButtonFilter setCharacters={setCharacters} characters={characters} />
       </div>
       <div className="main__card">
         <Cards students={students} character={characters}></Cards>

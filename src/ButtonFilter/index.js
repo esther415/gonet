@@ -4,15 +4,27 @@ import "../Styles/Button.scss";
 const buttonFilter = ({ setCharacters }) => {
   const [staff, setStaff] = useState([]);
   const [students, setStudents] = useState([]);
+  let urlStudents = " http://localhost:5008/students";
+  let urlStaff = " http://localhost:5008/staff";
 
   useEffect(() => {
-    fetch("json/hp-staff.json")
-      .then((response) => response.json())
-      .then((data) => setStaff(data));
+    fetch(urlStudents, {
+      method: "GET",
 
-    fetch("json/hp-students.json")
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    })
       .then((response) => response.json())
-      .then((data) => setStudents(data));
+      .then((data) => setStudents(data))
+      .catch((error) => console.log(error));
+
+    fetch(urlStaff, {
+      method: "GET",
+
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    })
+      .then((response) => response.json())
+      .then((data) => setStaff(data))
+      .catch((error) => console.log(error));
   }, []);
 
   const filterStudent = () => {

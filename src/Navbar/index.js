@@ -9,7 +9,6 @@ const navbar = () => {
   const dispatch = useDispatch();
   const favList = useSelector((state) => state.fav.favorites);
   const [show, setShow] = useState(false);
-  console.log("favList ", favList);
 
   const showModal = () => {
     setShow(!show);
