@@ -1,0 +1,53 @@
+$tablet: 768px;
+
+.main {
+  height: 100vh;
+  padding: 10px;
+  background-image: url("../assets/harryPotter.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: scroll;
+  @media (min-width: $tablet) {
+    padding: 0 100px 100px 100px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__header {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--img {
+      width: 123px;
+      margin-top: 20px;
+      @media (min-width: $tablet) {
+        width: 193px;
+        margin-top: 150px;
+      }
+    }
+    &--title {
+      margin-top: 15px;
+
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+
+      line-height: 25px;
+      text-align: center;
+      color: #ffffff;
+      @media (min-width: $tablet) {
+        font-size: 36px;
+        margin-top: 25px;
+      }
+    }
+
+    &__card {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+  }
+}
