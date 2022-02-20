@@ -1,0 +1,320 @@
+.display-block {
+  display: none;
+
+  .modalContainer {
+    position: fixed;
+    top: 40%;
+    width: 50%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #ffffff;
+    .modalContainerClose {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .modal-close {
+        background: none;
+        border-radius: 50%;
+        border: 1px solid;
+        color: #333333;
+        font-size: 1.2rem;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .modal-character {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 40px;
+      color: #000000;
+    }
+
+    .modalContainerForm {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .modalContainerFormDiv {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin-top: 20px;
+        .modalContainerFormInput {
+          color: #263238;
+          outline: none;
+          height: 60px;
+          padding: 15px;
+          font-size: 14px;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid #263238;
+          border-radius: 5.33333px 5.33333px 0px 0px;
+          background-color: #f3f3f3;
+          display: inline-block;
+        }
+        .modalContainerFormText {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 32px;
+          margin: 0px;
+          display: block;
+          align-items: center;
+          letter-spacing: 0.01em;
+          color: #263238;
+        }
+      }
+
+      .modalContainerFormDivRadios {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin-top: 18px;
+        .modalContainerFormP {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 32px;
+          margin: 0px;
+          display: block;
+          align-items: center;
+          letter-spacing: 0.01em;
+          color: #263238;
+        }
+        .modalContainerFormDiv {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .modalContainerFormDivDiv {
+            display: flex;
+
+            .modalContainerFormInput {
+              color: #263238;
+              outline: none;
+              height: 60px;
+              padding: 15px;
+              font-size: 14px;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              border-bottom: 1px solid #263238;
+              border-radius: 5.33333px 5.33333px 0px 0px;
+              background-color: #f3f3f3;
+              display: inline-block;
+            }
+            .modalContainerFormText {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 32px;
+              margin: -10px 0 0px 10px;
+              display: block;
+              align-items: center;
+              letter-spacing: 0.01em;
+              color: #263238;
+            }
+          }
+        }
+      }
+      .modalContainerFormFile {
+        margin-top: 15px;
+        .modalContainerFormFileP {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 32px;
+
+          display: block;
+          align-items: center;
+          letter-spacing: 0.01em;
+          color: #263238;
+        }
+      }
+      .modalContainerButton {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 60px;
+        .modalContainerButtonDiv {
+          width: 40%;
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.6);
+          color: #ffffff;
+          padding: 20px;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.display-none {
+  display: block;
+  .modalContainer {
+    position: fixed;
+    top: 50%;
+    width: 60%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #ffffff;
+    .modalContainerClose {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .modal-close {
+        background: none;
+        border-radius: 50%;
+        border: 1px solid;
+        color: #333333;
+        font-size: 1.2rem;
+        width: 2.1rem;
+        height: 2rem;
+      }
+    }
+
+    .modal-character {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 40px;
+      color: #000000;
+    }
+
+    .modalContainerForm {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .modalContainerFormDiv {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin-top: 20px;
+        .modalContainerFormInput {
+          color: #263238;
+          outline: none;
+          height: 60px;
+          padding: 15px;
+          font-size: 14px;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid #263238;
+          border-radius: 5.33333px 5.33333px 0px 0px;
+          background-color: #f3f3f3;
+          display: inline-block;
+        }
+        .modalContainerFormText {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 32px;
+          margin: 0px;
+          display: block;
+          align-items: center;
+          letter-spacing: 0.01em;
+          color: #263238;
+        }
+      }
+
+      .modalContainerFormDivRadios {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin-top: 18px;
+        .modalContainerFormP {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 32px;
+          margin: 0px;
+          display: block;
+          align-items: center;
+          letter-spacing: 0.01em;
+          color: #263238;
+        }
+        .modalContainerFormDiv {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .modalContainerFormDivDiv {
+            display: flex;
+
+            .modalContainerFormInput {
+              color: #263238;
+              outline: none;
+              height: 60px;
+              padding: 15px;
+              font-size: 14px;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              border-bottom: 1px solid #263238;
+              border-radius: 5.33333px 5.33333px 0px 0px;
+              background-color: #f3f3f3;
+              display: inline-block;
+            }
+            .modalContainerFormText {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 32px;
+              margin: -10px 0 0px 10px;
+              display: block;
+              align-items: center;
+              letter-spacing: 0.01em;
+              color: #263238;
+            }
+          }
+        }
+      }
+      .modalContainerFormFile {
+        margin-top: 15px;
+        .modalContainerFormFileP {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 32px;
+
+          display: block;
+          align-items: center;
+          letter-spacing: 0.01em;
+          color: #263238;
+        }
+      }
+      .modalContainerButton {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 60px;
+        .modalContainerButtonDiv {
+          width: 40%;
+          border-radius: 4px;
+          background: rgba(0, 0, 0, 0.6);
+          color: #ffffff;
+          padding: 20px;
+          border: 3px solid #6b63b5;
+        }
+      }
+    }
+  }
+}
