@@ -10,7 +10,7 @@ JSON SERVER
 Hacer el diseño 
 • Si hubieras tenido más tiempo ¿qué hubieras mejorado o qué más hubieras
 hecho?
-Validaciones, agregar toasts, al  crear un nuevo personaje que tambien se guardara en redux, un login para tener control
+Validaciones en formulario, agregar toasts, al  crear un nuevo personaje que tambien se guardara en redux, un login para tener control
 • Descríbenos un pain point o bug con el que te hayas encontrado y como lo
 solucionaste
 Solamente una vez utilice Scss y al principio me costo trabajo poder implmentar scss 
