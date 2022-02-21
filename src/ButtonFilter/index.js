@@ -31,10 +31,10 @@ const buttonFilter = ({ setCharacters }) => {
 
   return (
     <div className="button">
-      <button className="button__filter" onClick={filterStudent}>
+      <button className="button__filter" onClick={filterStudent}  data-cy="student-filter">
         <h4 className="button__filter--title">ESTUDIANTES</h4>
       </button>
-      <button className="button__filter" onClick={filterStaff}>
+      <button className="button__filter" onClick={filterStaff}  data-cy="staff-filter">
         <h4 className="button__filter--title">STAFF</h4>
       </button>
     </div>

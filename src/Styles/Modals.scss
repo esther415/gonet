@@ -62,17 +62,6 @@
           background-color: #f3f3f3;
           display: inline-block;
         }
-        .modalContainerFormTitle {
-          font-style: normal;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 32px;
-          margin: 0px;
-          display: block;
-          align-items: center;
-          letter-spacing: 0.01em;
-          color: #ff0000;
-        }
         .modalContainerFormText {
           font-style: normal;
           font-weight: normal;
@@ -123,17 +112,6 @@
               border-radius: 5.33333px 5.33333px 0px 0px;
               background-color: #f3f3f3;
               display: inline-block;
-            }
-            .modalContainerFormTitle {
-              font-style: normal;
-              font-weight: normal;
-              font-size: 14px;
-              line-height: 32px;
-              margin: 0px;
-              display: block;
-              align-items: center;
-              letter-spacing: 0.01em;
-              color: #ff0000;
             }
             .modalContainerFormText {
               font-style: normal;
@@ -244,17 +222,6 @@
           background-color: #f3f3f3;
           display: inline-block;
         }
-        .modalContainerFormTitle {
-          font-style: normal;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 32px;
-          margin: 0px;
-          display: block;
-          align-items: center;
-          letter-spacing: 0.01em;
-          color: #ff0000;
-        }
         .modalContainerFormText {
           font-style: normal;
           font-weight: normal;
@@ -306,17 +273,6 @@
               background-color: #f3f3f3;
               display: inline-block;
             }
-            .modalContainerFormTitle {
-              font-style: normal;
-              font-weight: normal;
-              font-size: 14px;
-              line-height: 32px;
-              margin: 0px;
-              display: block;
-              align-items: center;
-              letter-spacing: 0.01em;
-              color: #ff0000;
-            }
             .modalContainerFormText {
               font-style: normal;
               font-weight: normal;
@@ -357,12 +313,6 @@
           color: #ffffff;
           padding: 20px;
           border: 3px solid #6b63b5;
-          &:hover {
-            background: rgba(107, 99, 181, 0.6);
-          }
-          &:focus {
-            background: #6b63b5;
-          }
         }
       }
     }

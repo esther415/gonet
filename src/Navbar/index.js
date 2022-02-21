@@ -21,7 +21,7 @@ const navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar__content">
-        <button className="navbar__content__button">
+        <button className="navbar__content__button" data-cy="favorite-list">
           <h4 className="navbar__content__button--title">FAVORITOS </h4>{" "}
           <img
             src="icons/saveWhite.png"
@@ -37,14 +37,20 @@ const navbar = () => {
                         src={fav.image}
                         className="navbar__content__button__content__dropdown--img"
                       />
-                      <p className="navbar__content__button__content__dropdown--title">
+                      <p
+                        className="navbar__content__button__content__dropdown--title"
+                        data-cy="favorite-name"
+                      >
                         {fav.name}
                       </p>
                       <div
                         onClick={() => removeFav(fav)}
                         className="   navbar__content__button__content__dropdown--icon"
                       >
-                        <img src="icons/trash.png"></img>
+                        <img
+                          src="icons/trash.png"
+                          data-cy="favorite-delete"
+                        ></img>
                       </div>
                     </div>
                   </>
@@ -60,7 +66,7 @@ const navbar = () => {
         </button>
       </div>
       <Modal show={show} setShow={setShow}></Modal>
-      <button className="navbar__button" onClick={showModal}>
+      <button className="navbar__button" onClick={showModal}          data-cy="modal-createCharacter">
         <h4 className="navbar__button--title"> AGREGAR </h4>
         <img src="icons/user.png" className="navbar__button--img"></img>
       </button>

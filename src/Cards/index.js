@@ -44,9 +44,10 @@ const Cards = ({ character }) => {
   };
 
   return (
-    <div className="cards">
+    <div className="cards" data-cy="cards">
       {charactersList.map((data) => (
         <>
+
           <div className="cards__content">
             {data.house === "Gryffindor" && (
               <div className="cards__content__div1">
@@ -98,6 +99,7 @@ const Cards = ({ character }) => {
                   <div className="imgDiv">
                     <label className="checkeable">
                       <input
+                        data-cy="favorite-Checked"
                         checked={
                           favList.map((list) => list.name).includes(data.name)
                             ? true
@@ -114,7 +116,7 @@ const Cards = ({ character }) => {
                   </div>
                 </div>
                 <div className="cards__content__container__data">
-                  <h1 className="cards__content__container__data--title">
+                  <h1 className="cards__content__container__data--title" data-cy="character-name">
                     {data.name}
                   </h1>
                 </div>
@@ -226,6 +228,7 @@ const Cards = ({ character }) => {
               </div>
             )}
           </div>
+          
         </>
       ))}
     </div>

@@ -112,7 +112,7 @@ const Modal = ({ show, setShow }) => {
       <div className={showClassName}>
         <div className="modalContainer" onClick={handleModalContainerClick}>
           <div className="modalContainerClose">
-            <p className="modal-character">Agrega un personaje</p>{" "}
+            <p className="modal-character" data-cy="modal-isVisible">Agrega un personaje</p>{" "}
             <button className="modal-close" onClick={() => setShow(!show)}>
               X
             </button>
@@ -122,6 +122,7 @@ const Modal = ({ show, setShow }) => {
             <div className="modalContainerFormDiv">
               <label className="modalContainerFormText">NOMBRE</label>
               <input
+               data-cy="modal-name"
                 onBlur={handleBlur}
                 className="modalContainerFormInput"
                 value={useForm.name}
@@ -137,6 +138,7 @@ const Modal = ({ show, setShow }) => {
               <label className="modalContainerFormText">CUMPLEAÑOS</label>
 
               <input
+                    data-cy="modal-dateOfBirth"
                 onBlur={handleBlur}
                 className="modalContainerFormInput"
                 value={useForm.dateOfBirth}
@@ -155,6 +157,7 @@ const Modal = ({ show, setShow }) => {
               <label className="modalContainerFormText">COLOR DE OJOS</label>
 
               <input
+                              data-cy="modal-eyeColour"
                 onBlur={handleBlur}
                 className="modalContainerFormInput"
                 value={useForm.eyeColour}
@@ -173,6 +176,7 @@ const Modal = ({ show, setShow }) => {
               <label className="modalContainerFormText">COLOR DE PELO</label>
 
               <input
+                      data-cy="modal-hairColour"
                 onBlur={handleBlur}
                 className="modalContainerFormInput"
                 value={useForm.hairColour}
@@ -193,6 +197,7 @@ const Modal = ({ show, setShow }) => {
               <div className="modalContainerFormDiv">
                 <div className="modalContainerFormDivDiv">
                   <input
+                        data-cy="modal-gender"
                     type="radio"
                     value="mujer"
                     name="gender"
@@ -203,6 +208,7 @@ const Modal = ({ show, setShow }) => {
                 </div>
                 <div className="modalContainerFormDivDiv">
                   <input
+               
                     type="radio"
                     value="hombre"
                     name="gender"
@@ -227,6 +233,7 @@ const Modal = ({ show, setShow }) => {
                     name="position"
                     onChange={onChange}
                     onBlur={handleBlur}
+                         data-cy="modal-position"
                   />
                   <label className="modalContainerFormText">Estudiante</label>
                 </div>
@@ -261,6 +268,7 @@ const Modal = ({ show, setShow }) => {
             )}
             <div className="modalContainerButton">
               <button
+              data-cy="submit"
                 type="submit"
                 className="modalContainerButtonDiv"
                 onClick={() => setShow(!show)}

@@ -1,4 +1,4 @@
 {
-  "port": 500,
-  "no-cors": true
+  "port": 5008,
+  "cors": true
 }
