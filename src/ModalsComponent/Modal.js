@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "../Styles/Modals.scss";
 const Modal = ({ show, setShow }) => {
   const [useForm, setUseForm] = useState({
@@ -10,15 +10,7 @@ const Modal = ({ show, setShow }) => {
     position: " ",
     files: null,
   });
-  const [formErrors, setformErrors] = useState({
-    name: "",
-    dateOfBirth: "",
-    eyeColour: "",
-    hairColour: " ",
-    gender: " ",
-    position: " ",
-    files: null,
-  });
+
   const [useFile, setUseFile] = useState(null);
 
   const showClassName = show ? "display-none" : " display-block";
@@ -30,43 +22,6 @@ const Modal = ({ show, setShow }) => {
     setUseForm({ ...useForm, [e.target.name]: e.target.value });
   };
 
-  const handleBlur = (event) => {
-    switch (event.target.name) {
-      case "name":
-        formErrors.name = !event.target.value ? "Este campo es requerido" : "";
-        setformErrors(formErrors);
-        break;
-      case "gender":
-        formErrors.gender = !event.target.value
-          ? "Este campo es requerido"
-          : "";
-        break;
-      case "eyeColour":
-        formErrors.eyeColour = !event.target.value
-          ? "Este campo es requerido"
-          : "";
-        break;
-      case "hairColour":
-        formErrors.hairColour = !event.target.value
-          ? "Este campo es requerido"
-          : "";
-        break;
-      case "dateOfBirth":
-        formErrors.dateOfBirth = !event.target.value
-          ? "Selecciona una opción"
-          : "";
-        break;
-      case "position":
-        formErrors.position = !event.target.value
-          ? "Selecciona una opción"
-          : "";
-        break;
-      case "files":
-        formErrors.files = !event.target.value ? "Sube una foto" : "";
-        break;
-    }
-    setformErrors(formErrors);
-  };
 
   const onSubmit = async (event) => {
     let body;
@@ -84,7 +39,7 @@ const Modal = ({ show, setShow }) => {
         hogwartsStaff: false,
       });
     }
-    if (useForm.position === "staff") {
+    else {
       body = JSON.stringify({
         name: useForm.name,
         gender: useForm.gender,
@@ -107,6 +62,16 @@ const Modal = ({ show, setShow }) => {
       .catch((error) => console.log(error));
   };
 
+useEffect(()=>{
+useForm.name=''
+useForm.gender=''
+useForm.eyeColour=''
+useForm.hairColour=''
+useForm.dateOfBirth=''
+useForm.position=''
+setUseForm(useForm)
+setUseFile('')
+},[ ])
   return (
     <div>
       <div className={showClassName}>
@@ -123,34 +88,28 @@ const Modal = ({ show, setShow }) => {
               <label className="modalContainerFormText">NOMBRE</label>
               <input
                data-cy="modal-name"
-                onBlur={handleBlur}
+        
                 className="modalContainerFormInput"
                 value={useForm.name}
                 type="text"
                 name="name"
                 onChange={onChange}
               />
-              {formErrors.name && (
-                <p className="modalContainerFormTitle">{formErrors.name} </p>
-              )}
+          
             </div>
             <div className="modalContainerFormDiv">
               <label className="modalContainerFormText">CUMPLEAÑOS</label>
 
               <input
                     data-cy="modal-dateOfBirth"
-                onBlur={handleBlur}
+        
                 className="modalContainerFormInput"
                 value={useForm.dateOfBirth}
                 type="date"
                 name="dateOfBirth"
                 onChange={onChange}
               />
-              {formErrors.dateOfBirth && (
-                <p className="modalContainerFormTitle">
-                  {formErrors.dateOfBirth}
-                </p>
-              )}
+            
             </div>
 
             <div className="modalContainerFormDiv">
@@ -158,18 +117,14 @@ const Modal = ({ show, setShow }) => {
 
               <input
                               data-cy="modal-eyeColour"
-                onBlur={handleBlur}
+        
                 className="modalContainerFormInput"
                 value={useForm.eyeColour}
                 type="text"
                 name="eyeColour"
                 onChange={onChange}
               />
-              {formErrors.eyeColour && (
-                <p className="modalContainerFormTitle">
-                  {formErrors.eyeColour}
-                </p>
-              )}
+           
             </div>
 
             <div className="modalContainerFormDiv">
@@ -177,18 +132,14 @@ const Modal = ({ show, setShow }) => {
 
               <input
                       data-cy="modal-hairColour"
-                onBlur={handleBlur}
+        
                 className="modalContainerFormInput"
                 value={useForm.hairColour}
                 type="text"
                 name="hairColour"
                 onChange={onChange}
               />
-              {formErrors.hairColour && (
-                <p className="modalContainerFormTitle">
-                  {formErrors.hairColour}
-                </p>
-              )}
+            
             </div>
 
             <div className="modalContainerFormDivRadios">
@@ -218,9 +169,7 @@ const Modal = ({ show, setShow }) => {
                   <label className="modalContainerFormText">Hombre</label>
                 </div>{" "}
               </div>{" "}
-              {formErrors.gender && (
-                <p className="modalContainerFormTitle">{formErrors.gender}</p>
-              )}
+           
             </div>
             <div className="modalContainerFormDivRadios">
               {" "}
@@ -232,7 +181,7 @@ const Modal = ({ show, setShow }) => {
                     value="estudiante"
                     name="position"
                     onChange={onChange}
-                    onBlur={handleBlur}
+            
                          data-cy="modal-position"
                   />
                   <label className="modalContainerFormText">Estudiante</label>
@@ -242,36 +191,30 @@ const Modal = ({ show, setShow }) => {
                     type="radio"
                     value="staff"
                     name="position"
-                    onBlur={handleBlur}
+            
                     onChange={onChange}
                   />
                   <label className="modalContainerFormText">Staff</label>
                 </div>
-                {formErrors.position && (
-                  <p className="modalContainerFormTitle">
-                    {formErrors.position}
-                  </p>
-                )}
+             
               </div>
             </div>
             <div className="modalContainerFormFile">
               <p className="modalContainerFormFileP">FOTOGRAFÍA</p>
               <input
-                onBlur={handleBlur}
+        
                 type="file"
                 name="files"
                 onChange={(e) => setUseFile(e.target.files[0].name)}
               />
             </div>
-            {formErrors.files && (
-              <p className="modalContainerFormTitle">{formErrors.files}</p>
-            )}
+           
             <div className="modalContainerButton">
               <button
               data-cy="submit"
                 type="submit"
                 className="modalContainerButtonDiv"
-                onClick={() => setShow(!show)}
+                onClick={() =>   setShow(!show)}
               >
                 GUARDAR
               </button>

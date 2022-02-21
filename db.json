@@ -549,6 +549,17 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Albus Dumbledore",
+      "gender": "male",
+      "dateOfBirth": "31-07-1980",
+      "hogwartsStaff": true,
+      "hogwartsStudent": false,
+      "eyeColour": "green",
+      "hairColour": "black",
+      "image": "https://cinematicos.net/wp-content/uploads/l-intro-1639601334-1536x863.jpg"
     }
   ],
   "students": [
