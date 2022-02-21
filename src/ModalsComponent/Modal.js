@@ -23,8 +23,6 @@ const Modal = ({ show, setShow }) => {
 
   const showClassName = show ? "display-none" : " display-block";
 
-  let urlStudents = " http://localhost:5008/students";
-  let urlStaff = " http://localhost:5008/staff";
   let urlCharacter = " http://localhost:5008/character";
 
   const handleModalContainerClick = (e) => e.stopPropagation();
@@ -71,36 +69,35 @@ const Modal = ({ show, setShow }) => {
   };
 
   const onSubmit = async (event) => {
+    let body;
     event.preventDefault();
-
-    const body = JSON.stringify({
-      name: useForm.name,
-      gender: useForm.gender,
-      eyeColour: useForm.eyeColour,
-      hairColour: useForm.hairColour,
-      dateOfBirth: useForm.dateOfBirth,
-      image: useFile,
-      alive: true,
-    });
-
     if (useForm.position === "estudiante") {
-      fetch(urlStudents, {
-        method: "POST",
-        body,
-        headers: { "Content-type": "application/json; charset=UTF-8" },
-      })
-        .then((response) => response.json())
-        .catch((error) => console.log(error));
+      body = JSON.stringify({
+        name: useForm.name,
+        gender: useForm.gender,
+        eyeColour: useForm.eyeColour,
+        hairColour: useForm.hairColour,
+        dateOfBirth: useForm.dateOfBirth,
+        image: useFile,
+        alive: true,
+        hogwartsStudent: true,
+        hogwartsStaff: false,
+      });
     }
     if (useForm.position === "staff") {
-      fetch(urlStaff, {
-        method: "POST",
-        body,
-        headers: { "Content-type": "application/json; charset=UTF-8" },
-      })
-        .then((response) => response.json())
-        .catch((error) => console.log(error));
+      body = JSON.stringify({
+        name: useForm.name,
+        gender: useForm.gender,
+        eyeColour: useForm.eyeColour,
+        hairColour: useForm.hairColour,
+        dateOfBirth: useForm.dateOfBirth,
+        image: useFile,
+        alive: true,
+        hogwartsStudent: false,
+        hogwartsStaff: true,
+      });
     }
+
     fetch(urlCharacter, {
       method: "POST",
       body,

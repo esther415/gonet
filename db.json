@@ -549,34 +549,6 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
-    },
-    {
-      "id": 1,
-      "name": "ANA",
-      "gender": "male",
-      "dateOfBirth": "31-07-1980",
-      "eyeColour": "green",
-      "hairColour": "black",
-      "image": "http://hp-api.herokuapp.com/images/harry.jpg"
-    },
-    {
-      "id": 41,
-      "name": "ANA",
-      "gender": "male",
-      "dateOfBirth": "31-07-1980",
-      "eyeColour": "green",
-      "hairColour": "black",
-      "image": "letters.png"
-    },
-    {
-      "name": "sdf",
-      "gender": "hombre",
-      "eyeColour": "dfd",
-      "hairColour": " sd",
-      "dateOfBirth": "2022-02-10",
-      "image": null,
-      "alive": true,
-      "id": 42
     }
   ],
   "students": [

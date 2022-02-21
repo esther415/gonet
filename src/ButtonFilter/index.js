@@ -2,37 +2,31 @@
 import React, { useState, useEffect } from "react";
 import "../Styles/Button.scss";
 const buttonFilter = ({ setCharacters }) => {
-  const [staff, setStaff] = useState([]);
-  const [students, setStudents] = useState([]);
-  let urlStudents = " http://localhost:5008/students";
-  let urlStaff = " http://localhost:5008/staff";
+  const [charactersLis, setCharactersList] = useState([]);
+  let urlCharacter = " http://localhost:5008/character";
 
   useEffect(() => {
-    fetch(urlStudents, {
+    fetch(urlCharacter, {
       method: "GET",
-
       headers: { "Content-type": "application/json; charset=UTF-8" },
     })
       .then((response) => response.json())
-      .then((data) => setStudents(data))
-      .catch((error) => console.log(error));
-
-    fetch(urlStaff, {
-      method: "GET",
-
-      headers: { "Content-type": "application/json; charset=UTF-8" },
-    })
-      .then((response) => response.json())
-      .then((data) => setStaff(data))
+      .then((data) => setCharactersList(data))
       .catch((error) => console.log(error));
   }, []);
-
   const filterStudent = () => {
-    setCharacters(students);
+    const studentsFilter = charactersLis.filter(
+      (character) => character.hogwartsStudent
+    );
+
+    setCharacters(studentsFilter);
   };
 
   const filterStaff = () => {
-    setCharacters(staff);
+    const staffFilter = charactersLis.filter(
+      (character) => character.hogwartsStaff
+    );
+    setCharacters(staffFilter);
   };
 
   return (

@@ -5,7 +5,7 @@ import { favorites } from "../store/favorites";
 import { useSelector } from "react-redux";
 import "../Styles/Cards.scss";
 
-const Cards = ({ students, character }) => {
+const Cards = ({ character }) => {
   const [charactersList, setCharactersList] = useState([]);
 
   const [toogleChecked, setToogleChecked] = useState(true);
@@ -92,9 +92,7 @@ const Cards = ({ students, character }) => {
                       /{" "}
                     </h4>
                     <h4 className="cards__content__container__div__status--title">
-                      {students.map((std) => std.name).includes(data.name)
-                        ? "ESTUDIANTE"
-                        : "STAFF"}
+                      {data.hogwartsStudent ? "ESTUDIANTE" : "STAFF"}
                     </h4>
                   </div>
                   <div className="imgDiv">
@@ -166,9 +164,7 @@ const Cards = ({ students, character }) => {
                     </h4>
 
                     <h4 className="cards__content__containerDisabled__div__status--title">
-                      {students.map((std) => std.name).includes(data.name)
-                        ? "ESTUDIANTE"
-                        : "STAFF"}
+                      {data.hogwartsStudent ? "ESTUDIANTE" : "STAFF"}
                     </h4>
                   </div>
                   <div className="imgDiv">

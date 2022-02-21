@@ -6,10 +6,9 @@ import Cards from "./Cards";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
-  const [students, setStudents] = useState([]);
 
   let urlCharacter = " http://localhost:5008/character";
-  let urlStudents = " http://localhost:5008/students";
+
   useEffect(() => {
     fetch(urlCharacter, {
       method: "GET",
@@ -17,14 +16,6 @@ const App = () => {
     })
       .then((response) => response.json())
       .then((data) => setCharacters(data))
-      .catch((error) => console.log(error));
-
-    fetch(urlStudents, {
-      method: "GET",
-      headers: { "Content-type": "application/json; charset=UTF-8" },
-    })
-      .then((response) => response.json())
-      .then((data) => setStudents(data))
       .catch((error) => console.log(error));
   }, []);
 
@@ -37,7 +28,7 @@ const App = () => {
         <ButtonFilter setCharacters={setCharacters} characters={characters} />
       </div>
       <div className="main__card">
-        <Cards students={students} character={characters}></Cards>
+        <Cards character={characters}></Cards>
       </div>
     </div>
   );
