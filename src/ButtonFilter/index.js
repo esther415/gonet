@@ -29,13 +29,35 @@ const buttonFilter = ({ setCharacters }) => {
     setCharacters(staffFilter);
   };
 
+  const filterHouse = () => {
+    const staffFilter = charactersLis.filter(
+      (character) => character.house === "Gryffindor"
+    );
+    setCharacters(staffFilter);
+  };
+
   return (
     <div className="button">
-      <button className="button__filter" onClick={filterStudent}  data-cy="student-filter">
+      <button
+        className="button__filter"
+        onClick={filterStudent}
+        data-cy="student-filter"
+      >
         <h4 className="button__filter--title">ESTUDIANTES</h4>
       </button>
-      <button className="button__filter" onClick={filterStaff}  data-cy="staff-filter">
+      <button
+        className="button__filter"
+        onClick={filterStaff}
+        data-cy="staff-filter"
+      >
         <h4 className="button__filter--title">STAFF</h4>
+      </button>
+      <button
+        className="button__filter"
+        onClick={filterHouse}
+        data-cy="staff-filter"
+      >
+        <h4 className="button__filter--title">GRYFFINDOR</h4>
       </button>
     </div>
   );
